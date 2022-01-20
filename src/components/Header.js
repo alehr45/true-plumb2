@@ -1,17 +1,21 @@
 import React from "react";
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap'
+import Image from "../images/logo1.png"
+import { Button } from "react-bootstrap"
 
 
 function Header() {
     return (
         <>
-            <Navbar bg="light" expand="lg">
+            <Navbar className="border-bottom" bg="white" expand="lg">
                 <Container>
-                    <Navbar.Brand href="#home">True Plumb 2.0</Navbar.Brand>
+                    <Navbar.Brand href="#home">
+                        <img className="header-image" src={Image} alt="Snow" height={65} width={220} />
+                    </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link href="#home">Home</Nav.Link>
+
                             <Nav.Link href="#link">About Us</Nav.Link>
                             <NavDropdown title="Services" id="basic-nav-dropdown">
                                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
@@ -22,6 +26,9 @@ function Header() {
                             </NavDropdown>
                         </Nav>
                     </Navbar.Collapse>
+                    <Navbar.Brand href="#home">
+                        <Button variant="success">Call Us Now!</Button>
+                    </Navbar.Brand>
                 </Container>
             </Navbar>
         </>
